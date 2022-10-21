@@ -14,7 +14,7 @@ public class Menu {
         System.out.println("2 - Вывести список моих авто");
         String salon = scanner.nextLine();
         switch (salon){
-            case "1" -> {autosalon.initauto();autosalon.shopauto(clients);}
+            case "1" -> {autosalon.initauto();autosalon.shopauto(clients);menu();}
             case "2" -> {clients.spisok(clients);} //Вывод списка авто клиента
             default -> menu();
         }

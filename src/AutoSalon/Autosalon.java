@@ -2,12 +2,10 @@ package AutoSalon;
 
 import Human.Clients;
 import Marki.*;
-import menu.Menu;
 
 import java.util.Scanner;
 
 public class Autosalon {
-    Menu menu = new Menu();
     Scanner scanner = new Scanner(System.in);
     Auto autos[] = new Auto[10];
 
@@ -21,14 +19,14 @@ public class Autosalon {
         switch (vibor) {
             case "1" -> {
                 for (int i = 0; i < autos.length; i++) {
-                    if (autos[i] instanceof BMW) {
+                    if (autos[i] instanceof BMW) { //
                         clients.addautocl(autos[i]);
                     }
                 }
                 clients.setBalance(clients.getBalance() - 100000);
                 System.out.println("Вы приобрели BMW");
                 System.out.println("С Вас списано - 100 000$");
-                menu.menu();
+
             }
             case "2" -> {
                 for (int i = 0; i < autos.length; i++) {
@@ -39,7 +37,7 @@ public class Autosalon {
                 clients.setBalance(clients.getBalance() - 150000);
                 System.out.println("Вы приобрели Mercedes");
                 System.out.println("С Вас списано - 150 000$");
-                menu.menu();
+
             }
             case "3" -> {
                 for (int i = 0; i < autos.length; i++) {
@@ -50,7 +48,7 @@ public class Autosalon {
                 clients.setBalance(clients.getBalance() - 50000);
                 System.out.println("Вы приобрели WV");
                 System.out.println("С Вас списано - 75 000$");
-                menu.menu();
+
             }
             case "4" -> {
                 for (int i = 0; i < autos.length; i++) {
@@ -61,7 +59,7 @@ public class Autosalon {
                 clients.setBalance(clients.getBalance() - 75000);
                 System.out.println("Вы приобрели WV");
                 System.out.println("С Вас списано - 75 000$");
-                menu.menu();
+
             }
             default -> shopauto(clients);
         }
