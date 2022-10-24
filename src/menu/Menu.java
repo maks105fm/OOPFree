@@ -12,10 +12,13 @@ public class Menu {
     public void menu(){
         System.out.println("1 - Отправиться в автосалон");
         System.out.println("2 - Вывести список моих авто");
+        System.out.println();
+        System.out.println("Баланс клиента: " + clients.getBalance());
+
         String salon = scanner.nextLine();
         switch (salon){
             case "1" -> {autosalon.initauto();autosalon.shopauto(clients);menu();}
-            case "2" -> {clients.spisok(clients);} //Вывод списка авто клиента
+            case "2" -> {clients.spisok(); menu();} //Вывод списка авто клиента
             default -> menu();
         }
     }

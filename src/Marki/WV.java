@@ -1,4 +1,7 @@
 package Marki;
 
-public class WV implements Auto {
+public class WV extends Car implements Auto {
+    public WV(String model) {
+        super(model);
+    }
 }
