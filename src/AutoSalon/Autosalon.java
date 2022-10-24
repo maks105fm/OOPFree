@@ -12,7 +12,7 @@ public class Autosalon {
     private final int PRICEWV = 150000;
 
     Scanner scanner = new Scanner(System.in);
-    Auto autos[] = new Auto[10];
+    Auto autos[] = new Auto[100];
 
 
     public void shopauto(Clients clients) {
@@ -86,18 +86,38 @@ public class Autosalon {
 
 
     public void initauto() {
-        //аполнить массив автосалона 20 бмв 30 мерсов 4 фв 15 пежо
-        autos[0] = new BMW("BMW");
-        autos[1] = new BMW("BMW");
-        autos[2] = new BMW("BMW");
-        autos[3] = new BMW("BMW");
-        autos[4] = new Mercedes("Mersedes");
-        autos[5] = new Pejo("Pejo");
-        autos[6] = new Pejo("Pejo");
-        autos[7] = new Pejo("Pejo");
-        autos[8] = new WV("WV");
-        autos[9] = new WV("WV");
+        int m = 0;
 
+        for (int i = 0; i < autos.length; i++) {
+            if (autos[i] == null & m < 30) {
+                autos[i] = new Mercedes("Mercedes");
+                m++;
+            }
+        }
+        m = 0;
+
+        for (int i = 0; i < autos.length; i++) {
+            if (autos[i] == null & m < 20) {
+                autos[i] = new BMW("BMW");
+                m++;
+            }
+        }
+        m = 0;
+
+        for (int i = 0; i < autos.length; i++) {
+            if (autos[i] == null & m < 4) {
+                autos[i] = new WV("WV");
+                m++;
+            }
+        }
+        m = 0;
+
+        for (int i = 0; i < autos.length; i++) {
+            if (autos[i] == null & m < 7) {
+                autos[i] = new Pejo("Pejo");
+                m++;
+            }
+        }
     }
 
 
@@ -111,7 +131,7 @@ public class Autosalon {
         } else if (car instanceof Pejo) {
             return PRICEPEJO;
         } else {
-          return  0;
+            return 0;
         }
 
     }
