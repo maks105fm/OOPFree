@@ -2,7 +2,6 @@ package Human;
 
 import Marki.Auto;
 import Marki.Car;
-import Marki.Mercedes;
 
 public class Clients extends Human {
     private Auto autos[] = new Auto[100];
@@ -29,12 +28,11 @@ public class Clients extends Human {
                 if (autos[i] instanceof Car) {
                     System.out.println(i + "  " + ((Car) autos[i]).model);
                 }
-
             }
         }
     }
 
-    public Auto autoYach(int index){
+    public Auto autoYach(int index) {
         return autos[index];
     }
 }

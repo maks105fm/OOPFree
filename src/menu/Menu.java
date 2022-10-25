@@ -21,18 +21,19 @@ public class Menu {
 
     public void menu(){
 
-
+        System.out.println();
         System.out.println("1 - Отправиться в автосалон");
         System.out.println("2 - Вывести список моих авто");
+        System.out.println("3 - Отправиться на металобазу");
         System.out.println();
-        System.out.println("3 - Баланс клиента: " + clients.getBalance());
-        System.out.println("4 - Отправиться на металобазу");
+        System.out.println(" Ваш баланс " + clients.getBalance());
+
 
         String salon = scanner.nextLine();
         switch (salon){
             case "1" -> {autosalon.shopauto(clients);menu();}
             case "2" -> {clients.spisok(); menu();} //Вывод списка авто клиента
-            case "4" -> {goToMetal();} //Вывод списка авто клиента
+            case "3" -> {goToMetal(); menu();} //Вывод списка авто клиента
             default -> menu();
         }
     }
