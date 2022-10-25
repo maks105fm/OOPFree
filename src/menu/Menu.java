@@ -42,7 +42,10 @@ public class Menu {
         clients.spisok();
         int indexAuto = Integer.parseInt(scanner.nextLine());
         Auto auto = clients.autoYach(indexAuto);
-        metalobaza.utilAuto(auto);
+         boolean util = metalobaza.utilAuto(auto);
+            if (util){
+                //тут надо у клиента вызвать метод который очистит ячейку в масииве
+            }
     }
 
 

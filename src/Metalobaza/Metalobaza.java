@@ -6,8 +6,8 @@ import Marki.Car;
 
 public class Metalobaza {
 
-    public void utilAuto(Auto auto) {
-        if ()
+    public boolean utilAuto(Auto auto) {
         System.out.println(((Car) auto).model + " util ");
+        return true;
     }
 }
