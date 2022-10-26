@@ -10,6 +10,8 @@ public class Clients extends Human {
         super(name, age);
     }
 
+
+
     public void addautocl(Auto auto) {
         for (int i = 0; i < autos.length; i++) {
             if (autos[i] == null) {
@@ -32,7 +34,13 @@ public class Clients extends Human {
         }
     }
 
-    public Auto autoYach(int index) {
+    public Auto autoYach(int index) { //получение инфы из ячейки которую указали
         return autos[index];
     }
+
+    public void utilAuto(int index){
+        autos[index] = null;
+    }
+
+
 }

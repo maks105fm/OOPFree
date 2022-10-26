@@ -5,6 +5,7 @@ import Human.Clients;
 import Marki.Auto;
 import Marki.Car;
 import Metalobaza.Metalobaza;
+import org.w3c.dom.ls.LSOutput;
 
 import java.util.Scanner;
 
@@ -14,40 +15,48 @@ public class Menu {
     Scanner scanner = new Scanner(System.in);
     Metalobaza metalobaza = new Metalobaza();
 
-    public void glavMenu(){
+    public void glavMenu() {
         autosalon.initauto();
         menu();
     }
 
-    public void menu(){
+    public void menu() {
 
-        System.out.println();
-        System.out.println("1 - Отправиться в автосалон");
+        System.out.println("\n1 - Отправиться в автосалон");
         System.out.println("2 - Вывести список моих авто");
         System.out.println("3 - Отправиться на металобазу");
-        System.out.println();
-        System.out.println(" Ваш баланс " + clients.getBalance());
+        System.out.println("\nВаш баланс " + clients.getBalance());
 
 
         String salon = scanner.nextLine();
-        switch (salon){
-            case "1" -> {autosalon.shopauto(clients);menu();}
-            case "2" -> {clients.spisok(); menu();} //Вывод списка авто клиента
-            case "3" -> {goToMetal(); menu();} //Вывод списка авто клиента
+        switch (salon) {
+            case "1" -> {
+                autosalon.shopauto(clients);
+                menu();
+            }
+            case "2" -> {
+                clients.spisok();
+                menu();
+            } //Вывод списка авто клиента
+            case "3" -> {
+                goToMetal();
+                menu();
+            } //Вывод списка авто клиента
             default -> menu();
         }
     }
 
-    public void goToMetal(){
+    public void goToMetal() {
         clients.spisok();
         int indexAuto = Integer.parseInt(scanner.nextLine());
         Auto auto = clients.autoYach(indexAuto);
-         boolean util = metalobaza.utilAuto(auto);
-            if (util){
-                //тут надо у клиента вызвать метод который очистит ячейку в масииве
-            }
-    }
+        boolean util = metalobaza.utilAuto(auto,autosalon, clients);
+        if (util) {
+            clients.utilAuto(indexAuto);
 
+            //тут надо у клиента вызвать метод который очистит ячейку в масииве
+        }
+    }
 
 
 }

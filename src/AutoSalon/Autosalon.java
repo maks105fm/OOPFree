@@ -24,11 +24,12 @@ public class Autosalon {
                 System.out.println(i + " " + ((Car) autos[i]).model + " - " + priceAuto(autos[i]) + "$");
             }
         }
-        String vibor = scanner.nextLine();
+        int vibor = Integer.parseInt(scanner.nextLine());
 
-        clients.addautocl(autos[Integer.parseInt(vibor)]);
-        System.out.println(" вы преобрели " + ((Car) autos[Integer.parseInt(vibor)]).model);
-        autos[Integer.parseInt(vibor)] = null;
+        clients.addautocl(autos[vibor]);
+        System.out.println(" Вы приобрели " + ((Car) autos[(vibor)]).model);
+        clients.setBalance(clients.getBalance() - priceAuto(autos[vibor]));
+        autos[vibor] = null;
 
 
 //        switch (vibor) {
