@@ -6,7 +6,7 @@ import Marki.Auto;
 import Marki.Car;
 
 public class Metalobaza {
-
+private int trubi = 1000;
 
     public boolean utilAuto(Auto auto,Autosalon autosalon, Clients clients) {
         System.out.println(((Car) auto).model + " util ");

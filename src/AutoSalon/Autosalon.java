@@ -125,7 +125,6 @@ public class Autosalon {
         }
     }
 
-
     public int priceAuto(Auto car) {
         if (car instanceof Mercedes) {
             return PRICEMERCEDES;
