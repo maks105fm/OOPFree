@@ -4,8 +4,8 @@ import AutoSalon.Autosalon;
 import Human.Clients;
 import Marki.Auto;
 import Marki.Car;
+import Metal.Trubi;
 import Metalobaza.Metalobaza;
-import org.w3c.dom.ls.LSOutput;
 
 import java.util.Scanner;
 
@@ -14,6 +14,7 @@ public class Menu {
     Clients clients = new Clients("Имя1", 5);
     Scanner scanner = new Scanner(System.in);
     Metalobaza metalobaza = new Metalobaza();
+    Trubi trubi = new Trubi();
 
     public void glavMenu() {
         autosalon.initauto();
@@ -21,7 +22,6 @@ public class Menu {
     }
 
     public void menu() {
-
         System.out.println("\n1 - Отправиться в автосалон");
         System.out.println("2 - Вывести список моих авто");
         System.out.println("3 - Отправиться на металобазу");
