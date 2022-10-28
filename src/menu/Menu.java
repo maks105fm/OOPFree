@@ -24,7 +24,7 @@ public class Menu {
     public void menu() {
         System.out.println("\n1 - Отправиться в автосалон");
         System.out.println("2 - Вывести список моих авто");
-        System.out.println("3 - Отправиться на металобазу");
+        System.out.println("3 - Отправить авто на метал");
         System.out.println("\nВаш баланс " + clients.getBalance());
 
 
@@ -47,16 +47,14 @@ public class Menu {
     }
 
     public void goToMetal() {
+
+
         clients.spisok();
         int indexAuto = Integer.parseInt(scanner.nextLine());
-        Auto auto = clients.autoYach(indexAuto);
-        boolean util = metalobaza.utilAuto(auto,autosalon, clients);
-        if (util) {
-            clients.utilAuto(indexAuto);
+        Car car = clients.autoYach(indexAuto);
+        metalobaza.nametal(car, clients);
 
             //тут надо у клиента вызвать метод который очистит ячейку в масииве
         }
     }
 
-
-}

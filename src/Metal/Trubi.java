@@ -1,9 +1,17 @@
 package Metal;
 
-public class Trubi {
-    public final int massa = 2;
+import menu.Metal;
 
-    public int getMassa() {
+public class Trubi implements Metal {
+    private final int massa = 2;
+
+
+    @Override
+   public int  getMassa(){
         return massa;
     }
+
+
+
+
 }

@@ -4,7 +4,7 @@ import Marki.Auto;
 import Marki.Car;
 
 public class Clients extends Human {
-    private Auto autos[] = new Auto[100];
+    private Car autos[] = new Car[100];
 
     public Clients(String name, int age) {
         super(name, age);
@@ -12,7 +12,7 @@ public class Clients extends Human {
 
 
 
-    public void addautocl(Auto auto) {
+    public void addautocl(Car auto) {
         for (int i = 0; i < autos.length; i++) {
             if (autos[i] == null) {
                 autos[i] = auto;
@@ -34,7 +34,7 @@ public class Clients extends Human {
         }
     }
 
-    public Auto autoYach(int index) { //получение инфы из ячейки которую указали
+    public Car autoYach(int index) { //получение инфы из ячейки которую указали
         return autos[index];
     }
 

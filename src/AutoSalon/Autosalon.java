@@ -12,7 +12,7 @@ public class Autosalon {
     private final int PRICEWV = 150000;
 
     Scanner scanner = new Scanner(System.in);
-    Auto autos[] = new Auto[100];
+    Car autos[] = new Car[100];
 
 
     public void shopauto(Clients clients) {
@@ -30,63 +30,6 @@ public class Autosalon {
         System.out.println(" Вы приобрели " + ((Car) autos[(vibor)]).model);
         clients.setBalance(clients.getBalance() - priceAuto(autos[vibor]));
         autos[vibor] = null;
-
-
-//        switch (vibor) {
-//            case "1" -> {
-//                for (int i = 0; i < autos.length; i++) {
-//                    if (autos[i] instanceof BMW) { //
-//                        clients.addautocl(autos[i]);
-//                        autos[i] = null;
-//                        break;
-//                    }
-//                }
-//                clients.setBalance(clients.getBalance() - 100000);
-//                System.out.println("Вы приобрели BMW");
-//                System.out.println("С Вас списано - 100 000$");
-//
-//            }
-//            case "2" -> {
-//                for (int i = 0; i < autos.length; i++) {
-//                    if (autos[i] instanceof Mercedes) {
-//                        clients.addautocl(autos[i]);
-//                        autos[i] = null;
-//                        break;
-//                    }
-//                }
-//                clients.setBalance(clients.getBalance() - 150000);
-//                System.out.println("Вы приобрели Mercedes");
-//                System.out.println("С Вас списано - 150 000$");
-//
-//            }
-//            case "3" -> {
-//                for (int i = 0; i < autos.length; i++) {
-//                    if (autos[i] instanceof Pejo) {
-//                        clients.addautocl(autos[i]);
-//                        autos[i] = null;
-//                        break;
-//                    }
-//                }
-//                clients.setBalance(clients.getBalance() - 50000);
-//                System.out.println("Вы приобрели Pejo");
-//                System.out.println("С Вас списано - 75 000$");
-//
-//            }
-//            case "4" -> {
-//                for (int i = 0; i < autos.length; i++) {
-//                    if (autos[i] instanceof WV) {
-//                        clients.addautocl(autos[i]);
-//                        autos[i] = null;
-//                        break;
-//                    }
-//                }
-//                clients.setBalance(clients.getBalance() - 75000);
-//                System.out.println("Вы приобрели WV");
-//                System.out.println("С Вас списано - 75 000$");
-//
-//            }
-//            default -> shopauto(clients);
-//        }
     }
 
 
